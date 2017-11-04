@@ -1,0 +1,8 @@
+<h2>{{title}}</h2>
+
+<ul>
+  {{#each products as |product|}}
+    <li>{{product}}</li>
+    <li {{action "showDetail" product}}>Show {{product}}</li>
+  {{/each}}
+</ul>
