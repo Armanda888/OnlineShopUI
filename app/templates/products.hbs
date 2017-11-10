@@ -1,1 +1,10 @@
-{{products-list title="Products List" products=model}}
+{{#product-filter
+   filter=(action 'filterByCity')
+   as |products|}}
+  <ul class="results">
+    {{#each model as |product|}}
+      <li>{{products-list product=product}}</li>
+    {{/each}}
+  </ul>
+{{/product-filter}}
+{{outlet}}
