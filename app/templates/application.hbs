@@ -1,23 +1,94 @@
-<div class="container">
-  <div class="menu">
+
+ <!--
+  <div>
+
+   <img src="public/assets/images/theBeautiful.png" class="logo"/>
+    {{#each navItems as |item|}}
+      {{navigation-item nav=item}}
+    {{/each}}
+  </div>
+
+  {{#paper-toolbar}}
+    <div class='md-toolbar-tools'>
     {{#link-to 'index'}}
-      <h1>
-        <em>Bundles UI</em>
-      </h1>
-    {{/link-to}}
-    <div class="links">
-    {{#link-to 'products'}}
-            Products
-      {{/link-to}}
-      {{#link-to 'about'}}
-        About
-      {{/link-to}}
-      {{#link-to 'contact'}}
-        Contact
-      {{/link-to}}
+    <img src="assets/images/theBeautiful.png" class="logo"/> {{/link-to}}
+        {{#link-to 'products'}} {{#paper-button class='first-nav'}} Hair Wave {{/paper-button}} {{/link-to}}
+        {{#link-to 'contact'}} {{#paper-button class='nav-item'}} Closure & Wigs {{/paper-button}} {{/link-to}}
+
+        <div class='paper-right'>
+        {{#if session.currentUser}}
+          {{paper-icon 'person'}}
+                {{#paper-button}} Logout {{/paper-button}}
+             {{else}}
+                {{#paper-button}} Login {{/paper-button}}
+             {{/if}}
+        </div>
+     </div>
+  {{/paper-toolbar}}
+-->
+
+ <nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header logo">
+       {{#link-to 'index'}}<img src="assets/images/theBeautiful.png" class="logo"/> {{/link-to}}
     </div>
+    <ul class="nav navbar-nav">
+      <li>{{#link-to 'index'}} Home {{/link-to}}</li>
+      <li class="dropdown">
+        <a class="dropdown-toggle first-nav" data-toggle="dropdown" href="#">Hair Wave
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li>{{#link-to 'products.malaysian'}} Malaysian virgin hair {{/link-to}} </li>
+          <li>{{#link-to 'products.brazilian'}} Brazilian virgin hair {{/link-to}} </li>
+          <li>{{#link-to 'products.peruvian'}} Peruvian virgin hair {{/link-to}} </li>
+          <li>{{#link-to 'products.indian'}} Indian virgin hair  {{/link-to}} </li>
+        </ul>
+      </li>
+      <li><a href="#">Closure & Wigs</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
   </div>
+</nav>
+
   <div class="body">
-    {{outlet}}
+      {{outlet}}
   </div>
-</div>
+
+  <footer class="footer-bs">
+          <div class="row">
+          	<div class="col-md-4 footer-brand animated fadeInLeft">
+              	<h2>TheBeautiful</h2>
+                  <p>We offer best bundle hairs</p>
+                  <p>© 2017, All rights reserved</p>
+              </div>
+          	<div class="col-md-6 footer-nav animated fadeInUp">
+              	<h4>Menu —</h4>
+              	<div class="col-md-6">
+                      <ul class="pages">
+                       <li>{{#link-to 'products.malaysian'}} Malaysian virgin hair {{/link-to}} </li>
+                       <li>{{#link-to 'products.brazilian'}} Brazilian virgin hair {{/link-to}} </li>
+                       <li>{{#link-to 'products.peruvian'}} Peruvian virgin hair {{/link-to}} </li>
+                       <li>{{#link-to 'products.indian'}} Indian virgin hair  {{/link-to}} </li>
+                      </ul>
+                  </div>
+              	<div class="col-md-6">
+                      <ul class="list">
+                          <li><a href="#">About Us</a></li>
+                          <li><a href="#">Contacts</a></li>
+                          <li><a href="#">Terms & Condition</a></li>
+                          <li><a href="#">Privacy Policy</a></li>
+                      </ul>
+                  </div>
+              </div>
+          	<div class="col-md-2 footer-social animated fadeInDown">
+              	<h4>Follow Us</h4>
+              	<ul>
+                  	<li><a href="#">Facebook</a></li>
+                  	<li><a href="#">Twitter</a></li>
+                  	<li><a href="#">Instagram</a></li>
+                  	<li><a href="#">RSS</a></li>
+                  </ul>
+              </div>
+
+          </div>
+      </footer>

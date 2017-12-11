@@ -1,0 +1,19 @@
+<div class="layout-column flex-33 flex-sm-100 layout-align-center-center">
+
+    {{#paper-menu as |menu|}}
+      {{#menu.trigger}}
+        {{#paper-button iconButton=true}}
+          Hair Wave
+        {{/paper-button}}
+      {{/menu.trigger}}
+
+      {{#menu.content width=6 as |content|}}
+      {{choices}}
+        {{#each choices as |item|}}
+          {{#content.menu-item onClick=(action "openSomething")}}
+            <span class="md-menu-align-target">Option</span> {{item}}
+          {{/content.menu-item}}
+        {{/each}}
+      {{/menu.content}}
+    {{/paper-menu}}
+  </div>

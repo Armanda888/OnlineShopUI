@@ -1,0 +1,27 @@
+.product-item {
+  margin:5px;
+}
+
+.product-flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.image-cover {
+ width: 200px;
+ height: 200px;
+}
+
+.product-name {
+  display: block;
+  float: left;
+  color: #808080;
+}
+
+.product-price {
+  display: block;
+  clear: both;
+}

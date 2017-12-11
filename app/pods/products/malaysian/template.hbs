@@ -1,0 +1,14 @@
+<div class="container">
+<div class="product-flex-container">
+    {{#each model.products as |product|}}
+      {{list-products product=product}}
+    {{/each}}
+  </div>
+  <div>
+     <ul class="pagination">
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">next</a></li>
+    </ul>
+  </div>
+</div>
