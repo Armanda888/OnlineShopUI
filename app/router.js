@@ -17,13 +17,6 @@ Router.map(function() {
     this.route('indian', {'path': '/indian'});
   });
 
-  this.route('search', function() {
-  this.route('products', {'path': '/products'});
-    this.route('malaysian', {'path': '/malaysian'});
-    this.route('brazilian');
-    this.route('peruvian');
-    this.route('indian');
-   });
 
   this.route('index', {'path': '/'});
 
@@ -37,6 +30,7 @@ Router.map(function() {
 
   this.route('checkout');
   this.route('home');
+  this.route('product', { path: '/product/:product_id' });
 });
 
 export default Router;

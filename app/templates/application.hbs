@@ -1,58 +1,124 @@
-
- <!--
-  <div>
-
-   <img src="public/assets/images/theBeautiful.png" class="logo"/>
-    {{#each navItems as |item|}}
-      {{navigation-item nav=item}}
-    {{/each}}
-  </div>
-
-  {{#paper-toolbar}}
-    <div class='md-toolbar-tools'>
-    {{#link-to 'index'}}
-    <img src="assets/images/theBeautiful.png" class="logo"/> {{/link-to}}
-        {{#link-to 'products'}} {{#paper-button class='first-nav'}} Hair Wave {{/paper-button}} {{/link-to}}
-        {{#link-to 'contact'}} {{#paper-button class='nav-item'}} Closure & Wigs {{/paper-button}} {{/link-to}}
-
-        <div class='paper-right'>
-        {{#if session.currentUser}}
-          {{paper-icon 'person'}}
-                {{#paper-button}} Logout {{/paper-button}}
-             {{else}}
-                {{#paper-button}} Login {{/paper-button}}
-             {{/if}}
-        </div>
-     </div>
-  {{/paper-toolbar}}
--->
-
- <nav class="navbar">
+<nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header logo">
-       {{#link-to 'index'}}<img src="assets/images/theBeautiful.png" class="logo"/> {{/link-to}}
-    </div>
-    <ul class="nav navbar-nav">
-      <li>{{#link-to 'index'}} Home {{/link-to}}</li>
-      <li class="dropdown">
-        <a class="dropdown-toggle first-nav" data-toggle="dropdown" href="#">Hair Wave
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
+  <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        {{#link-to 'index'}}<img src="assets/images/theBeautiful.png" class="navbar-brand"/> {{/link-to}}
+      </div>
+
+      <!--
+  <div class="dropdown">
+     <button class="dropbtn">{{#link-to 'products'}} Hair wave {{/link-to}} <span class="caret"></span></button>
+     <div class="dropdown-content">
           <li>{{#link-to 'products.malaysian'}} Malaysian virgin hair {{/link-to}} </li>
           <li>{{#link-to 'products.brazilian'}} Brazilian virgin hair {{/link-to}} </li>
-          <li>{{#link-to 'products.peruvian'}} Peruvian virgin hair {{/link-to}} </li>
-          <li>{{#link-to 'products.indian'}} Indian virgin hair  {{/link-to}} </li>
-        </ul>
-      </li>
-      <li><a href="#">Closure & Wigs</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
+              <li>{{#link-to 'products.peruvian'}} Peruvian virgin hair {{/link-to}} </li>
+              <li>{{#link-to 'products.indian'}} Indian virgin hair  {{/link-to}} </li>
+              <li role="separator" class="divider"></li>
+     </div>
+   </div>
+   <div class="dropdown">
+      <button class="dropbtn">Wig<span class="caret"></span></button>
+      <div class="dropdown-content">
+            <li><a href="#">Full face wigs</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Lace front wig</a></li>
+      </div>
+   </div>
+  <div class="dropdown">
+     <span>{{#link-to 'products'}} Accessories {{/link-to}}</span>
   </div>
+  <div class="nav-link">{{#link-to 'products.malaysian'}}Accessories & Tools {{/link-to}}</div>
+  <a href="#">Sale</a>
+  <a href="#">Contact us</a>
+  <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Links<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.google.ch" target="_blank">My Webmail</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://www.google.ch" target="_blank">Timelogger</a></li>
+            <li><a href="http://www.cubetech.ch" target="_blank">cubetech.ch</a></li>
+         </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Jack Bass<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.fgruber.ch/" target="_blank"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> User Settings</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
+         </ul>
+        </li>
+      </ul>
+-->
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+         <li>
+           {{#link-to 'index'}}Home{{/link-to}}
+         </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hair wave <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li>{{#link-to 'products.malaysian'}} Malaysian virgin hair {{/link-to}} </li>
+            <li>{{#link-to 'products.brazilian'}} Brazilian virgin hair {{/link-to}} </li>
+            <li>{{#link-to 'products.peruvian'}} Peruvian virgin hair {{/link-to}} </li>
+            <li>{{#link-to 'products.indian'}} Indian virgin hair  {{/link-to}} </li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Categories</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Wigs <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Full face wigs</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Lace front wig</a></li>
+          </ul>
+        </li>
+      <li>
+          <a href="#">Accessories & Tools</a>
+      </li>
+      <li>
+          <a href="#">Sale</a>
+      </li>
+      <li>
+           <a href="#">Contact us</a>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Links<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.google.ch" target="_blank">My Webmail</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="http://www.google.ch" target="_blank">Timelogger</a></li>
+            <li><a href="http://www.cubetech.ch" target="_blank">cubetech.ch</a></li>
+         </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Jack Bass<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="http://www.fgruber.ch/" target="_blank"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> User Settings</a></li>
+            <li><a href="/logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</a></li>
+         </ul>
+        </li>
+      </ul>
+    </div>  <!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
-  <div class="body">
+
+ <div class="body">
       {{outlet}}
   </div>
+
 
   <footer class="footer-bs">
           <div class="row">
