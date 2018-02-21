@@ -11,7 +11,8 @@ export default function() {
                              category: 'San Francisco',
                              sizes: [10, 12],
                              productImages: ['https://upload.wikimedia.org/wikipedia/commons/c/cb/Crane_estate_(5).jpg',
-                             'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg']
+                             'https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg'],
+                             smallImages: ['bundle1_small.jpg', 'bundle2_small.jpg']
                            }
                          }, {
                            type: 'product',
@@ -22,7 +23,8 @@ export default function() {
                              category: 'Seattle',
                              sizes: [10, 12],
                              productImages: ['https://upload.wikimedia.org/wikipedia/commons/0/0e/Alfonso_13_Highrise_Tegucigalpa.jpg',
-                             'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg']
+                             'https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'],
+                             smallImages: ['bundle1_small.jpg', 'bundle2_small.jpg']
                            }
                          }, {
                            type: 'product',
@@ -32,7 +34,8 @@ export default function() {
                              description: 'Violet Beauregarde',
                              category: 'Portland',
                              sizes: [10, 12],
-                             productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg']
+                             productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'],
+                             smallImages: ['bundle1_small.jpg', 'bundle2_small.jpg']
                            }
                          },
                          {
@@ -43,7 +46,8 @@ export default function() {
                                description: 'Violet Beauregarde',
                                category: 'Portland',
                                sizes: [11],
-                               productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg']
+                               productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'],
+                               smallImages: ['bundle1_small.jpg', 'bundle2_small.jpg']
                              }
                            },
                            {
@@ -54,7 +58,8 @@ export default function() {
                                   description: 'Violet Beauregarde',
                                   category: 'Portland',
                                   sizes: [14],
-                                  productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg']
+                                  productImages: ['https://upload.wikimedia.org/wikipedia/commons/f/f7/Wheeldon_Apartment_Building_-_Portland_Oregon.jpg'],
+                                  smallImages: ['bundle1_small.jpg', 'bundle2_small.jpg']
                                 }
                               }
   ]
@@ -105,6 +110,12 @@ export default function() {
         return { data: products };
       }
     });
+    this.del('/product/:id', function(db, request) {
+        //var id = request.params.id;
+        //var product = db.get(id);
+
+        return products[0];
+      });
   this.get('/shoppingcarts/cart1', function(db) {
     return { data: {
       id: 'cart1',

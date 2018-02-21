@@ -4,10 +4,10 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-              <a data-toggle="collapse" href="#collapse1" aria-expanded="true">Hair Type</a>
+              <a data-toggle="collapse" href="#collapse1" aria-expanded=true>Hair Type</a>
             </h4>
           </div>
-          <div id="collapse1" class="panel-collapse collapse">
+          <div id="collapse1" class="panel-collapse collapse in" aria-expanded="true">
             <ul class="list-group">
                   <li>Malaysian virgin hair</li>
                   <li>Brazilian virgin hair </li>
@@ -61,10 +61,43 @@
      </div>
    </nav>
    -->
-</div>
+  </div>
 
 
-<div class="col-md-9">
-{{outlet}}
-</div>
+  <div class="col-md-9 col">
+  <div class="row-md-1">
+      <p>sortBy</p>
+       <div class="dropdown">
+        <button class="btn btn-primary dropdown-toggle sortby-button" type="button" data-toggle="dropdown">&nbsp; name
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#">name</a></li>
+          <li><a href="#">price</a></li>
+          <li><a href="#">latest</a></li>
+        </ul>
+      </div>
+      <select id="ddlList">
+          <option value="3">Three</option>
+          <option value="1">One</option>
+          <option value="1">one</option>
+          <option value="1">a</option>
+          <option value="1">b</option>
+          <option value="1">A</option>
+          <option value="1">B</option>
+          <option value="0">Zero</option>
+          <option value="2">Two</option>
+          <option value="8">Eight</option>
+      </select>
+    </div>
+    <div class="row-md-11">
+    {{outlet}}
+    </div>
+    <nav aria-label="Page navigation example" class="paging-link">
+          <ul class="pagination justify-content-center">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">next</a></li>
+          </ul>
+      </nav>
+  </div>
 </div>

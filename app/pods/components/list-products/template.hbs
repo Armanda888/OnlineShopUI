@@ -1,6 +1,9 @@
-
-<div class="col-xs-12 col-sm-6 col-md-3" style="margin-top:10px;">
-    <div class="col-item">
+<div class="row product-flex-container">
+    {{#each model as |product|}}
+<!--<div class="col-xs-12 col-sm-6 col-md-3" style="margin-top:10px;"> -->
+<ul style="list-style: none;">
+  <li class="col-md-3 col-sm-6 col-xs-12 portfolio-item wow zoomIn animated">
+    <div class="product-item">
         <div class="post-img-content">
           <img src="{{product.coverImage}}" alt="" class="image-cover img-responsive">
           <!--
@@ -13,8 +16,7 @@
             <div class="row">
                  <div class="price col-md-6">
                     <h5> {{product.name}}</h5>
-
-                    <span style="color:#ff0080;font-size: large;">${{product.salePrice}} &nbsp;&nbsp;</span>
+                    <span style="color:#ff0080;font-size: large;">${{product.salePrice}}&nbsp;</span>
                      <span><del>${{product.originPrice}}</del></span>
                  </div>
                  <div class="rating hidden-sm col-md-6">
@@ -27,9 +29,13 @@
                <p class="btn-add">
                  <i class="fa fa-shopping-cart"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">Add to cart</a></p>
                <p class="btn-details">
-               <i class="fa fa-list"></i><a href="http://www.jquery2dotnet.com" class="hidden-sm">More details</a></p>
+               <i class="fa fa-list"></i> {{#link-to "product" product.id}}More details {{/link-to}}</p>
             </div>
             <div class="clearfix"></div>
         </div>
     </div>
+<!--</div>-->
+  </li>
+ </ul>
+{{/each}}
 </div>

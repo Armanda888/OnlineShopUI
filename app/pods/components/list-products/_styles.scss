@@ -1,14 +1,14 @@
 
 
 
-.col-item
+.product-item
 {
     border: 1px solid #E1E1E1;
     border-radius: 10px;
     background: #FFF;
 }
 
-.col-item .photo img
+.product-item .photo img
 {
     margin: 0 auto;
     width: 100%;
@@ -16,21 +16,21 @@
     border-radius: 10px 10px 0 0 ;
 }
 
-.col-item .info
+.product-item .info
 {
     padding: 10px;
     border-radius: 0 0 5px 5px;
-    margin-top: 1px;
+    margin: 10px 0;
 }
 
-.col-item .price
+.product-item .price
 {
     /*width: 50%;*/
     float: left;
     margin-top: 5px;
 }
 
-.col-item .price h5
+.product-item .price h5
 {
     line-height: 20px;
     margin: 0;
@@ -41,12 +41,12 @@
     color: #ff0080;
 }
 
-.col-item .info .rating
+.product-item .info .rating
 {
     color: #777;
 }
 
-.col-item .rating
+.product-item .rating
 {
     /*width: 50%;*/
     float: left;
@@ -57,7 +57,7 @@
     height: 52px;
 }
 
-.col-item .separator
+.product-item .separator
 {
     border-top: 1px solid #E1E1E1;
 }
@@ -67,7 +67,7 @@
     clear: left;
 }
 
-.col-item .separator p
+.product-item .separator p
 {
     line-height: 20px;
     margin-bottom: 0;
@@ -75,23 +75,23 @@
     text-align: center;
 }
 
-.col-item .separator p i
+.product-item .separator p i
 {
     margin-right: 5px;
 }
-.col-item .btn-add
+.product-item .btn-add
 {
     width: 50%;
     float: left;
 }
 
-.col-item .btn-add
+.product-item .btn-add
 {
     border-right: 1px solid #E1E1E1;
 
 }
 
-.col-item .btn-details
+.product-item .btn-details
 {
     width: 50%;
     float: left;
@@ -154,3 +154,7 @@ Hover the image
     color: #FFF;
     font-weight: bold;
 }
+/*ul list item test*/
+
+
+/*end ul list item test*/

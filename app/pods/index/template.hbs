@@ -4,13 +4,13 @@
   <!-- Full-width images with number and caption text -->
   <div class="mySlides slide-1" style="display:block">
     <div class="numbertext"></div>
-    <img src="assets/images/slide1.jpg" style="width:100%">
+    <img src="{{rootURL}}assets/images/slide1.jpg" style="width:100%">
     <div class="text"></div>
   </div>
 
   <div class="mySlides slide-2">
     <div class="numbertext"></div>
-    <img src="assets/images/slide2.jpg" style="width:100%">
+    <img src="{{rootURL}}assets/images/slide2.jpg" style="width:100%">
     <div class="text"></div>
   </div>
 
@@ -25,9 +25,12 @@
   <div class='page-header'>
     <h2>Top Seller</h2>
   </div>
+  {{list-products model=model}}
+  <!--
   <div class="product-flex-container">
     {{#each model as |product|}}
       {{list-products product=product}}
     {{/each}}
   </div>
+  -->
 </div>

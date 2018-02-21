@@ -1,3 +1,109 @@
 .product-item-container {
+  padding: 1% 10%;
+
+  .picbox {
+    width: 25%;
+    height: auto;
+  }
+  .min_pic {
+    padding-top: 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    text-align: center;
+
+    ul#thumblist li {
+        display:inline;
+      }
+  }
+  .num {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin: auto;
+  }
+
+  /* Main carousel style */
+  .carousel {
+      width: 100%;
+  }
+
+  /* Indicators list style */
+  .product-images .carousel-indicators {
+      bottom: 0;
+      left: 0;
+      margin-left: 5px;
+      width: 100%;
+      list-style: none;
+  }
+  /* Indicators list style */
+  .product-images .carousel-indicators li {
+      border: medium none;
+      border-radius: 0;
+      float: left;
+      height: 54px;
+      margin-bottom: -50px;
+      margin-left: 0;
+      margin-right: 5px !important;
+      margin-top: 0;
+      width: 100px;
+  }
+  /* Indicators images style */
+  .product-images .carousel-indicators img {
+      border: 2px solid #FFFFFF;
+      float: left;
+      height: 54px;
+      left: 0;
+      width: 100px;
+  }
+
+  /* Indicators active image style */
+  .product-images .carousel-indicators .active img {
+      border: 2px solid #428BCA;
+      opacity: 0.7;
+  }
+
+  .smallImages {
+  padding-top: 10px;
+      width: 100%;
+      height: auto;
+      position: relative;
+      text-align: center;
+      margin-top: 10px;
+  }
+
+  .product_description {
+    .product_price {
+      .current_price {
+        display: inline-block;
+        font-size: 30px;
+        color: #ff63af;
+        font-weight: bold;
+      }
+      .original_price {
+        display: inline-block;
+        font-size: 25px;
+      }
+    .discount {
+        display: inline-block;
+      }
+    }
+
+    .product_sizes {
+      padding-top: 10px;
+
+      .panel_size {
+        box-shadow: 0px 0px 3px rgba(0,0,0, .2);
+        display: inline;
+        padding: 1px 5px;
+        margin: 0px 5px;
+        border: 2px solid #eee;
+      }
+      .panel_size:hover {
+        box-shadow: 0px 0px 3px rgba(0,0,0, .2) inset;
+        border: 2px solid #ff63af;
+      }
+    }
+  }
 
 }

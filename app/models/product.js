@@ -8,7 +8,7 @@ export default DS.Model.extend({
   productImages: DS.attr(),
   prices: DS.attr(),
   reviews: DS.attr(),
-
+  imageType: DS.attr('string'),
   images: Ember.computed('productImages', function() {
     let result = []
     if (this.get('productImages').length > 0) {

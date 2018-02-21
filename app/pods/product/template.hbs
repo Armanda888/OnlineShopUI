@@ -1,3 +1,83 @@
-<div class="product-item-container">
+<section class="pro-detail-columns">
+  <div class="product-item-container">
+    <div class="row">
 
-</div>
+    <div class="product-image-outer col-md-5">
+      <div id="product-images-carousel" class="carousel slide product-images col-md-6" data-ride="carousel">
+
+
+        <div class="carousel-inner cont-slider">
+        {{#each model.productImages as |productImage index|}}
+          {{#if (eq index 0)}}
+             <div class="item active">
+                {{#if (eq productImage.imageType "LOCAL")}}
+                    <img src="{{rootURL}}assets/images/{{productImage.imageUrl}}" alt="">
+                {{else}}
+                    <img src="{{productImage.imageUrl}}" alt="">
+                {{/if}}
+             </div>
+          {{else}}
+            <div class="item">
+                {{#if (eq productImage.imageType "LOCAL")}}
+                    <img src="{{rootURL}}assets/images/{{productImage.imageUrl}}" alt="">
+                {{else}}
+                    <img src="{{productImage.imageUrl}}" alt="">
+                {{/if}}
+            </div>
+          {{/if}}
+        {{/each}}
+
+        </div>  <!--end inner-->
+        <div class="smallImages">
+        <ol class="carousel-indicators">
+                      {{#each model.productImages as |productImage index|}}
+                        {{#if (eq index 0)}}
+                          <li data-target="#product-images-carousel" data-slide-to="{{index}}" class="active">
+                                {{#if (eq productImage.imageType "LOCAL")}}
+                                      <img src="{{rootURL}}assets/images/{{productImage.smallImageUrl}}" alt="">
+                                {{else}}
+                                     <img src="{{productImage.smallImageUrl}}" alt="">
+                                {{/if}}
+                          </li>
+                        {{else}}
+                          <li data-target="#product-images-carousel" data-slide-to="{{index}}">
+                                {{#if (eq productImage.imageType "LOCAL")}}
+                                      <img src="{{rootURL}}assets/images/{{productImage.smallImageUrl}}" alt="">
+                                {{else}}
+                                     <img src="{{productImage.smallImageUrl}}" alt="">
+                                {{/if}}
+                          </li>
+                        {{/if}}
+                      {{/each}}
+                      </ol>
+        </div>
+
+      </div> <!--end product-images-carousel-->
+
+    </div> <!--end product-image-outer-->
+
+      <div class="col-md-7 product_description"> <!--description-->
+         <h1> {{model.name}} </h1>
+         <h5> {{model.description}} </h5>
+         <div class="product_price">
+           <div class="current_price">$100 &nbsp;</div>
+           <div class="original_price"><del>$200</del></div>
+           <div class="discount">&nbsp; &nbsp;40%</div>
+         </div>
+         <div class="product_sizes">
+          {{#each model.sizes as |size|}}
+            <div class="panel_size">{{size}} </div>
+          {{/each}}
+          <select class="form-control" id="productSize" onchange={{action 'onSelectSize' value="target.value"}} >
+            <option value="">Select</option>
+            {{#each model.sizes as |size|}}
+              <option value="{{size}}">{{size}}</option>
+            {{/each}}
+          </select>
+         </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>

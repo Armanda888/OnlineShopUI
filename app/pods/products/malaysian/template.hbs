@@ -1,17 +1,8 @@
 <div class="sortBar">
-<p>sortBy</p>
 </div>
-<div class="product-flex-container">
-    {{#each model.products as |product|}}
-      {{list-product-item product=product}}
-    {{/each}}
+<div class="container">
+{{list-products model=model.products}}
 </div>
 
- <nav aria-label="Page navigation example" class="paging-link">
-      <ul class="pagination justify-content-center">
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">next</a></li>
-      </ul>
-  </nav>
+
 

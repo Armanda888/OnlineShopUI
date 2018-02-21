@@ -1,7 +1,8 @@
 import Controller from '@ember/controller';
 import Ember from 'ember'
+import WithRootMixin from '../../mixins/withRoot';
 
-export default Controller.extend({
+export default Controller.extend(WithRootMixin, {
   slideIndex : 0,
 
   _init () {
